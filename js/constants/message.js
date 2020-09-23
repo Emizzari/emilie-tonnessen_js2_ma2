@@ -1,0 +1,1 @@
+export const emptyBooks = "No more books";
