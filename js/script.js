@@ -1,6 +1,23 @@
-import { books } from "./settings/books.js";
+// import { books } from "./settings/books.js";
 
-console.log(books);
+let books = [
+    {
+        isbn: "1600506460320",
+        title: "Great book",
+    },
+    {
+        isbn: "1600506460373",
+        title: "Ok book",
+    },
+    {
+        isbn: "1600506460521",
+        title: "Bad book",
+    },
+    {
+        isbn: "1600506460456",
+        title: "Terrible book",
+    },
+];
 
 // Create the HTML for the books
 function createBookList () {
@@ -12,10 +29,13 @@ function createBookList () {
         bookContainer.innerHTML += `
             <li class="book">
                 <span class="book-title">${book.title}</span>
-                <span class="book-icon"><i class="fas fa-trash-alt" data-book="${book.isbn}"></i></span>
+                <span class="book-icon"><i class="fas fa-trash-alt" data-item="${book.isbn}"></i></span>
             </li>
         `;
     });
+
+
+    
 
     
 
@@ -33,11 +53,11 @@ createBookList();
 
 // Remove Books
 function removeBooks() {
-    console.log(event);
+    // console.log(event);
 
-    const deleteThisBook = event.target.dataset.book;
+    const deleteThisBook = event.target.dataset.item;
 
-    let newBookList = books.filter(function (book) {
+    const newBookList = books.filter(function (book) {
         if (deleteThisBook !== book) {
             return true;
         }
