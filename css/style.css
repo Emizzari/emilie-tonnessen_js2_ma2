@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 30px;
+    background: #ebebeb;
+    font-family: sans-serif;
+}
+
+.book{
+    width: 300px;
+    background: lightblue;
+    padding: 20px;
+    margin: 10px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.fa-trash-alt:hover{
+    cursor: pointer;
+}
+
+.book-icon{
+    text-align: right;
+}
+
